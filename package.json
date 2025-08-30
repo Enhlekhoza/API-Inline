@@ -1,0 +1,38 @@
+{
+  "name": "api-inline",
+  "version": "1.0.0",
+  "description": "A simple, lightweight API service project demonstrating inline API development with Express.js",
+  "main": "index.js",
+  "scripts": {
+    "start:a": "cd RunA && node index.js",
+    "start:b": "cd RunB && node index.js",
+    "start:all": "concurrently \"npm run start:a\" \"npm run start:b\"",
+    "dev:a": "cd RunA && nodemon index.js",
+    "dev:b": "cd RunB && nodemon index.js",
+    "dev:all": "concurrently \"npm run dev:a\" \"npm run dev:b\"",
+    "install:all": "npm install && cd RunA && npm install && cd ../RunB && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "nodejs",
+    "rest",
+    "microservices"
+  ],
+  "author": "Enhlekhoza",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Enhlekhoza/API-Inline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Enhlekhoza/API-Inline/issues"
+  },
+  "homepage": "https://github.com/Enhlekhoza/API-Inline#readme"
+}
+

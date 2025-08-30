@@ -1,0 +1,22 @@
+{
+  "name": "api-inline-examples",
+  "version": "1.0.0",
+  "description": "Example scripts for testing the API-Inline services",
+  "main": "test-apis.js",
+  "scripts": {
+    "test": "node test-apis.js",
+    "test:runa": "node -e \"require('./test-apis.js').testRunA()\"",
+    "test:runb": "node -e \"require('./test-apis.js').testRunB()\""
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "keywords": [
+    "api",
+    "testing",
+    "examples"
+  ],
+  "author": "Enhlekhoza",
+  "license": "ISC"
+}
+

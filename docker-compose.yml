@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  runa:
+    build: ./RunA
+    container_name: api-inline-runa
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - NODE_ENV=development
+    restart: unless-stopped
+    networks:
+      - api-inline-network
+    volumes:
+      - ./RunA:/app
+      - /app/node_modules
+
+  runb:
+    build: ./RunB
+    container_name: api-inline-runb
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+      - NODE_ENV=development
+    restart: unless-stopped
+    networks:
+      - api-inline-network
+    volumes:
+      - ./RunB:/app
+      - /app/node_modules
+
+networks:
+  api-inline-network:
+    driver: bridge
+
+volumes:
+  node_modules:
+
